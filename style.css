@@ -55,7 +55,7 @@ text-shadow:
 
   main {
       /* background: var(--gr1); */
-      background: url(./img/background2.png) no-repeat ;
+      background: url(./img/wallpapers.jpg) no-repeat ;
       background-size: cover;
       background-position: center;
     flex-grow: 1;
