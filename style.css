@@ -79,23 +79,7 @@ text-shadow:
     font-size: 1.2rem;
   }
 
-  /* .countdown-label {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-top: 2rem;
-  }
 
-  .countdown {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    background-color: #f3f3f3;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  } */
   .countdown-block {
 position: relative;
 padding: 2rem;
@@ -208,6 +192,14 @@ z-index: 2;
     color: #fff;
     border: 2px solid transparent;
   }
+  a.telegram-link {
+    font-size: 1rem;         /* зменшений розмір тексту */
+    padding: 0.75rem 1rem;   /* менші відступи */
+  }
+
+  a.telegram-link i {
+    font-size: 1.5rem;       /* зменшений розмір іконки */
+  }
 
   .div_main_photo {
     display: flex;
@@ -260,4 +252,27 @@ z-index: 2;
     .quote {
       font-size: 0.9rem;
     }
+    .title {
+      
+      font-size: 1.2rem;
+    }
+
+    .countdown-label {
+      font-size: 1.2rem;
+      
+    }
+    .countdown-label-2 {
+      font-size: 1.2rem;
+      
+    }
+  
+    .timer {
+      font-size: 1.8rem;
+      
+    }
+    .main_photo {
+      max-width:95%;
+      height: auto;
+    }
+
   }
