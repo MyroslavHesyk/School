@@ -129,6 +129,12 @@ z-index: 2;
     margin-bottom: 1rem;
     font-weight: 600;
   }
+  .countdown-label-2 {
+    font-size: 1.8rem;
+    color: #4aa39f;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
 
   .timer {
     font-size: 2.8rem;
