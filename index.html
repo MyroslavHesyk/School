@@ -49,10 +49,10 @@
       <a href="https://docs.google.com/document/d/1-jZgZMqoyr9bCDa_QUQFzdkRcsSuZ4id/edit?usp=sharing&ouid=105005981832481176958&rtpof=true&sd=true" target="_blank" class="telegram-link bg-white text-black hover:scale-105 transition-transform rounded-xl px-6 py-4 shadow-lg flex items-center gap-4 text-xl">
         <i class="fa-solid fa-mountain-sun text-3xl text-green-600"></i> Деталі <u>очної</u> участі
       </a>
-      <a href="https://t.me/+MtiWngymialmMDE6" target="_blank" class="telegram-link bg-white text-black hover:scale-105 transition-transform rounded-xl px-6 py-4 shadow-lg flex items-center gap-4 text-xl">
+      <a href="https://docs.google.com/document/d/1Lp-eWFLJTI5kFKe96r0ssiDk4ouXKjWw/edit?usp=sharing&ouid=105005981832481176958&rtpof=true&sd=true" target="_blank" class="telegram-link bg-white text-black hover:scale-105 transition-transform rounded-xl px-6 py-4 shadow-lg flex items-center gap-4 text-xl">
         <i class="fa-solid fa-desktop text-3xl text-green-600"></i> Деталі <u>дистанційної</u> участі
       </a>
-      <a href="https://t.me/+MtiWngymialmMDE6" target="_blank" class="telegram-link bg-white text-black hover:scale-105 transition-transform rounded-xl px-6 py-4 shadow-lg flex items-center justify-center gap-4 text-xl">
+      <a href="https://forms.gle/NMsAnAEdatVsdBym8" target="_blank" class="telegram-link bg-white text-black hover:scale-105 transition-transform rounded-xl px-6 py-4 shadow-lg flex items-center justify-center gap-4 text-xl">
         <i class="fa-solid fa-pen-to-square text-3xl text-blue-600"></i>
         <b>ЗАРЕЄСТРУВАТИСЯ</b>
       </a>
@@ -70,6 +70,37 @@
         “Успіх — це здатність рухатись від невдачі до невдачі, не втрачаючи ентузіазму.” — Вінстон Черчилль
       </div> -->
   </main>
+
+  <section class="gallery">
+    <h2 class="gallery-title">Cпікери та організатори</h2>
+    <div class="gallery">
+      <img src="/img/speakers/photo_1.jpg" alt="Фото 1" onclick="openModal(this)">
+      <img src="/img/speakers/photo_2.jpg" alt="Фото 2" onclick="openModal(this)">
+      <img src="/img/speakers/photo_3.jpg" alt="Фото 3" onclick="openModal(this)">
+      <img src="/img/speakers/photo_4.jpg" alt="Фото 4" onclick="openModal(this)">
+    </div>
+  </section>
+  
+  <!-- Modal structure -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <section class="location">
+    <h2 class="location-title">Місце проведення</h2>
+    <p class="location-address">Закарпатська обл., Хустський р-н, с. Осій</p>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=Закарпатська+обл.,+Хустський+р-н,+с.+Осій&output=embed" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+  
+
 
   <footer>
     <div class="motto">Нехай це літо стане переможним !</div>

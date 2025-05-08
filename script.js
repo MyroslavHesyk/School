@@ -50,3 +50,17 @@
   }
 
   setInterval(rotateQuote, 10000); // кожні 10 сек
+
+
+  function openModal(img) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  }
+
+  function closeModal(event) {
+    if (event.target.classList.contains('modal') || event.target.classList.contains('close')) {
+      document.getElementById("modal").style.display = "none";
+    }
+  }

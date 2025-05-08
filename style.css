@@ -238,6 +238,124 @@ z-index: 2;
       text-decoration: underline;
   }
 
+  /* ГАЛЕРЕЯ */
+  section.gallery {
+    padding: 40px 20px;
+    background-color: #eaeaea;
+    text-align: center;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .gallery > .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .gallery > .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+  }
+
+  .close:hover {
+    color: #ccc;
+  }
+
+
+  /* ЛОКАЦІЯ */
+
+  section.location {
+    padding: 40px 20px;
+    background-color: #b1d7bb;
+    text-align: center;
+  }
+
+  .location-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .location-address {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 співвідношення */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
   @media (max-width: 600px) {
     .countdown {
       font-size: 1.8rem;
@@ -277,7 +395,11 @@ z-index: 2;
 
     a.telegram-link-2 {
       font-size: 0.95rem;         /* зменшений розмір тексту */
-      padding: 0.75rem 0.4rem;   /* менші відступи */
+      padding: 0.3rem 0.3rem;   /* менші відступи */
     }
 
+    .location-address {
+      font-size: 1rem;
+     
+    }
   }
