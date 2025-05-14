@@ -64,3 +64,62 @@
       document.getElementById("modal").style.display = "none";
     }
   }
+
+// Функція для переміщення слайдів
+function moveSlide(direction) {
+  const track = document.querySelector('.slider-track');
+  const currentScroll = track.scrollLeft;
+  const slideWidth = track.querySelector('img').offsetWidth + 15; // 15px - це gap між слайдами
+  
+  track.scrollTo({
+    left: currentScroll + (slideWidth * direction),
+    behavior: 'smooth'
+  });
+}
+
+// Автоматичне гортання
+let autoScrollInterval;
+
+function startAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    const track = document.querySelector('.slider-track');
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    
+    if (track.scrollLeft >= maxScroll - 10) {
+      // Якщо доскролили до кінця - повертаємо на початок
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      // Інакше скролимо далі
+      moveSlide(1);
+    }
+  }, 2000); // Інтервал 2 секунди
+}
+
+// Зупиняємо автоматичне гортання при наведенні
+function setupSliderHover() {
+  const slider = document.querySelector('.gallery-slider');
+  
+  slider.addEventListener('mouseenter', () => {
+    clearInterval(autoScrollInterval);
+  });
+  
+  slider.addEventListener('mouseleave', () => {
+    startAutoScroll();
+  });
+}
+
+// Ініціалізація при завантаженні сторінки
+document.addEventListener('DOMContentLoaded', () => {
+  // Додаємо обробник подій для кнопок слайдера
+  document.querySelectorAll('.slider-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
+  
+  // Запускаємо автоматичне гортання
+  startAutoScroll();
+  
+  // Налаштовуємо поведінку при наведенні
+  setupSliderHover();
+});
